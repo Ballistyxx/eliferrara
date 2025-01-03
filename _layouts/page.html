@@ -83,6 +83,7 @@ layout: base
 
 
         <div class="page__content">
+          
         {%- if _article_header_type == 'overlay' or _article_header_type == 'cover' -%}
 
           {%- if _article_header_type == 'overlay' -%}
@@ -149,8 +150,9 @@ layout: base
                     {%- include article-info.html article=page semantic=false -%}
                     {%- include article-header.html article=page semantic=false -%}
                     {%- if page.excerpt -%}
-                      <p class="overlay__excerpt">{{ page.excerpt | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</p>
-                    {%- endif -%}
+                      <header class="overlay__excerpt" style="opacity: 1;"><h1>{{ page.excerpt_header | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</h1></header>
+                      <p class="overlay__excerpt" style="opacity: 1;">{{ page.excerpt | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</p>
+                                          {%- endif -%}
                     {%- if page.article_header.actions -%}
                       <ul class="menu">
                         {%- for _action in page.article_header.actions -%}
