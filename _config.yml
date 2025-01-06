@@ -19,18 +19,17 @@
 
 text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+url     : https://eliferrara.com # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
 title   : Eli's Blog
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  A blog about electronics, programming, and other things I find interesting.
 
 
 ## => Language and Timezone
 ##############################
 lang: # the language of your site, default as "en"
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
-
 
 ## => Author and Social
 ##############################
@@ -62,11 +61,16 @@ repository_tree: master
 
 ## => Paths
 ##############################
+# paths:
+#   root    : https://eliferrara.com/ # title link url, "/" (default)
+#   home    : https://eliferrara.com/ # home layout url, "/" (default)
+#   archive : https://eliferrara.com/archive.html # "/archive.html" (default)
+#   rss     : https://eliferrara.com/feed.xml # "/feed.xml" (default)
 paths:
-  root    : # title link url, "/" (default)
-  home    : # home layout url, "/" (default)
-  archive : # "/archive.html" (default)
-  rss     : # "/feed.xml" (default)
+  root    :  # title link url, "/" (default)
+  home    :  # home layout url, "/" (default)
+  archive :  # "/archive.html" (default)
+  rss     :  # "/feed.xml" (default)
 
 
 ## => Post
@@ -220,10 +224,11 @@ defaults:
 ## => Plugins
 ##############################
 feed:
-  url: eliferrara.com
+  url: https://eliferrara.com/
 
 plugins:
   - jekyll-feed
+  - jekyll-relative-links
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
