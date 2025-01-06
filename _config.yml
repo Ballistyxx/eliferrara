@@ -219,6 +219,9 @@ defaults:
 
 ## => Plugins
 ##############################
+feed:
+  url: eliferrara.com
+
 plugins:
   - jekyll-feed
   - jekyll-paginate
