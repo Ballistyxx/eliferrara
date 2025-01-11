@@ -1,6 +1,6 @@
 ---
 title: How I Built a DIY Digital Microscope
-tags: Raspberry-Pi Microscope 3D-Printed Tool
+tags: Raspberry-Pi Microscope 3D-Printed Tool DIY
 layout: article
 show_edit_on_github: false
 license: true
