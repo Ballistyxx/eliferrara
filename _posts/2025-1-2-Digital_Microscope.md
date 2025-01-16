@@ -1,6 +1,6 @@
 ---
 title: How I Built a DIY Digital Microscope
-tags: Raspberry-Pi Microscope 3D-Printed Tool DIY
+tags: [Raspberry Pi, Microscope, 3D Printed, Tool, DIY]
 layout: article
 show_edit_on_github: false
 license: true
@@ -8,15 +8,30 @@ license: true
 
 Like most of my projects, I got my inspiration for this one by through Youtube. Specifically, I saw this video ([Brauns CNC](https://www.youtube.com/watch?v=jzcHGjFiR0o)), and I was immediately hooked on the idea of building my own digital microscope. Although I had never experimented with using a camera module on a Raspberry Pi, I dove in headfirst.
 
+<!--more-->
+
 ---
 ## Materials
-(Required)
+
+### Required
  - Raspberry Pi Zero
  - Raspberry Pi Camera
+ - 15pin 1mm pitch to 22pin 0.5mm pitch FFC adapter
  - Macro lense
  - 3D Printer + Filament
  - 5 volt,  1-2 amp Micro USB power supply
  - HDMI Mini to HDMI adapter
+
+### Additional Hardware
+ - 1x heated insert
+ - 1x M3x8mm machine screw
+ - 4x M2x8mm machine screws (ideally 8x, for maximum sturdiness)
+
+### Tools
+ - M2, M3 allen wrenches
+ - Glue gun
+ - Heat inserter and/or soldering iron
+ - Optional: needle nose pliers
 
 <br>
 Like always, .step and all other files will be provided on this project's [Github Page](https://github.com/Ballistyxx/digital-microscope) so you can print and create your own!
@@ -87,5 +102,3 @@ Looking back after using this scope for over a year, I've come up with a few thi
 2. The base that I built for the microscope is functional, but much too flexible for my taste. Since the focus of the camera is heavily dependent on the distance of the lense from the top of the object, as the base flexes from the weight of my hand, it can make the final image blurry after the position is locked. I'll definitely be redesigning the base to prevent it from flexing in the future.
 
 Despite those issues, my microscope is still extremely versatile and I've used it more than most tools in my lab. I'm excited to continue using it in the future, and I've already gotten some ideas to improve the durability and functionality of my current design. Look out for another blog post on another tool I've made for my lab, and thank you for reading!
-
-<!--more-->
