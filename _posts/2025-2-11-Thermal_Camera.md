@@ -1,6 +1,6 @@
 ---
 title: How I Built a Thermal Camera from Scratch
-tags: [3D Printed, Tool, DIY, Custom PCB, Raspberry Pi, Camera, Tool] 
+tags: [3D Printed, Tool, DIY, Custom PCB, Raspberry Pi, Camera] 
 layout: article
 show_edit_on_github: false
 license: true
