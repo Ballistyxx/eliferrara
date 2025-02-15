@@ -1,6 +1,6 @@
 ---
 title: How I Built a DIY Digital Microscope
-tags: [Raspberry Pi, Microscope, 3D Printed, Tool, DIY]
+tags: [Raspberry Pi, Microscope, 3D Printed, Tool, DIY, Camera]
 layout: article
 show_edit_on_github: false
 license: true
@@ -15,6 +15,7 @@ Like most of my projects, I got my inspiration for this one by through Youtube. 
 
 ### Required
  - Raspberry Pi Zero
+ - 8GB SD Card
  - Raspberry Pi Camera
  - 15pin 1mm pitch to 22pin 0.5mm pitch FFC adapter
  - Macro lense
@@ -77,7 +78,7 @@ Troubleshooting the camera connection took the majority of my time on this proje
 
 ### Hardware
 
-Once I verified that my camera worked, I moved on to designing the 3D model to mount the Pi to. After mulitple major revisions, I settled on a design that isn't perfect, but works well enough. It consists of a rack and pinion mechanism, with a locking knob to keep the distance between the camera and the target constant. The Raspberry Pi and the camera assembly were both mounted to the rack, so that the focus of the camera could be adjusted for objects of different height.
+Once I verified that my camera worked, I moved on to designing the 3D model to mount the Pi to. After multiple major revisions, I settled on a design that isn't perfect, but works well enough. It consists of a rack and pinion mechanism, with a locking knob to keep the distance between the camera and the target constant. The Raspberry Pi and the camera assembly were both mounted to the rack, so that the focus of the camera could be adjusted for objects of different height.
 
 Perhaps the hardest part of the entire design to get correct was the geometry of the camera + lense assembly. I went through nearly a dozen revisions, tweaking the tolerances and dimensions of the model until I got one that let the lense friction-fit snugly in front of the camera sensor, which sat directly above it, held down by some M2 screws threaded into the plastic directly.
 
