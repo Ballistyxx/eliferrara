@@ -55,7 +55,7 @@ This project revolves around two key components: a standard camera module for vi
 
 ### Component Explanation
 
-<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Digital-Camera/thermopile-vs-lepton.webp" alt="Thumbnail of a MLX90640 versus a Lepton 3.5" width="500" ALIGN="right" HSPACE="20" VSPACE="20"/>
+<img src="/assets/Digital-Camera/thermopile-vs-lepton.webp" alt="Thumbnail of a MLX90640 versus a Lepton 3.5" width="500" ALIGN="right" HSPACE="20" VSPACE="20"/>
 
 The thermal camera module captures infrared radiation and converts it into a temperature map. I used the MLX90640, which offers a resolution of 32x24 pixels. This is relatively low by visual camera standards, but enough for basic thermal imaging. This is an effect of the type of sensor used. Thermopile sensors (the technology used to make the MLX90640) are cheaper to produce than the alternative microbolometer technology used by some more advanced sensors on the market, such as the ones produced by Teledyne FLIR, which have resolutions as high as 1024x768. However, those can cost as much as $40,000. Even their 'consumer grade' sensors with resolutions of 160x120 still cost $200-$300 at the time of writing this blog, more than the cost of the entire camera.
 
@@ -65,7 +65,7 @@ The Raspberry Pi Zero acts as the brain of the system, collecting and processing
 
 ### PCB Design
 
-<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Digital-Camera/PCB_render.webp" alt="F3D render of my custom circuit board" width="500" ALIGN="right" HSPACE="20" VSPACE="20"/>
+<img src="/assets/Digital-Camera/PCB_render.webp" alt="F3D render of my custom circuit board" width="500" ALIGN="right" HSPACE="20" VSPACE="20"/>
 
 
 One of the unique parts of this build that I am particularly proud of was the custom circuit board I designed and had manufactured for this project. It interfaces with the Raspberry Pi Zero using the 40-pin GPIO header, and has the following functionality:
@@ -79,7 +79,7 @@ One of the unique parts of this build that I am particularly proud of was the cu
 
 I designed this PCB using EasyEDA, a free and easy to use online EDA software. Next, after multiple design revisions and DRM checks, I used JLCPCB's PCB manufacturing service to have my custom circuit board brought to life. Their manufacturing and shipping process took about 2 weeks, and soon I was left with a custom circuit board at my front door.
 
-<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Digital-Camera/i2cdetect.webp" alt="Screenshot of Raspberry Pi OS desktop environment showcasing a successful scan of the I2C bus, revealing the MLX90640 sensor" width="500" ALIGN="right" HSPACE="20" VSPACE="20"/>
+<img src="/assets/Digital-Camera/i2cdetect.webp" alt="Screenshot of Raspberry Pi OS desktop environment showcasing a successful scan of the I2C bus, revealing the MLX90640 sensor" width="500" ALIGN="right" HSPACE="20" VSPACE="20"/>
 
 Upon testing, everything seemed to go to plan. So, after extensive continuity checks, I soldered the most expensive component to the circuit board first; the MLX90640 sensor. After painstakingly ensuring that polarity was correct, I soldered it into place, and to my relief, when plugged into the Raspberry Pi Zero's GPIO header, not only did the thermal sensor not blow up or burn out, but it was immediately recognized by the `i2cdetect -y 1` command at the correct I2C address, 0x33.
 
@@ -142,10 +142,10 @@ The code would repeatedly saturate the SPI connection to the LCD with updated vi
 
 ## 3D Printing & Enclosure Design
 
-<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Digital-Camera/full_computer_render.webp" alt="Onshape Screenshot of my Raspberry Pi Zero 2W interfacing with my custom circuit board, with all components attached" width="500" ALIGN="left" HSPACE="20" VSPACE="20"/>
+<img src="/assets/Digital-Camera/full_computer_render.webp" alt="Onshape Screenshot of my Raspberry Pi Zero 2W interfacing with my custom circuit board, with all components attached" width="500" ALIGN="left" HSPACE="20" VSPACE="20"/>
 
 
-<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Digital-Camera/full_model_render.webp" alt="Screenshot of Onshape 3D model" height="400" ALIGN="right" HSPACE="20" VSPACE="20"/>
+<img src="/assets/Digital-Camera/full_model_render.webp" alt="Screenshot of Onshape 3D model" height="400" ALIGN="right" HSPACE="20" VSPACE="20"/>
 
 
 A critical part of making this a handheld device was designing a compact, ergonomic enclosure. I used Onshape to design a custom case that:
@@ -164,7 +164,7 @@ This project is one that I am most proud of in my workshop. It works very well, 
 
 ### Results & Lessons Learned
 
-<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Digital-Camera/thermal_output.webp" alt="Still frame displayed by the camera, showing a thermal hotspot on another Raspberry Pi SBC" width="300" ALIGN="right" HSPACE="40" VSPACE="20"/>
+<img src="/assets/Digital-Camera/thermal_output.webp" alt="Still frame displayed by the camera, showing a thermal hotspot on another Raspberry Pi SBC" width="300" ALIGN="right" HSPACE="40" VSPACE="20"/>
 
 After assembling and debugging, I finally had a working DIY thermal camera! The blended images were clear, and the device successfully detected hotspots, as well as the wide range of temperatures within 0.1 C°.
 
