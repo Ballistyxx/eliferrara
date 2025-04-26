@@ -56,6 +56,25 @@
         {%- endif -%}
         <div class="item__content">
           <header><a href="{{ _article_url }}"><h2 itemprop="headline" class="item__header">{{ _article.title }}</h2></a></header>
+          {%- if _article.cover -%}
+           {%- assign _cover_filename = _article.cover | split: '/' | last -%}
+
+            
+            {%- assign _thumbnail_dir = _article.cover | remove_last: _cover_filename -%}
+
+            
+            {%- assign _thumbnail_path = _thumbnail_dir | append: 'thumbnail.webp' -%}
+
+            
+            {%- include snippets/get-nav-url.html path=_thumbnail_path -%}
+            {%- assign _thumbnail_url = __return -%}
+
+            
+            {%- if _thumbnail_url and _thumbnail_url != '' -%}
+              <img src="{{ _thumbnail_url }}" alt="{{ _article.title }} thumbnail" style="float: right; width: auto; height: 150px; margin-left: 15px; margin-top: 0px;" />
+            {%- endif -%}
+            
+          {%- endif -%}
           <div class="item__description">
             {%- if _article.excerpt and include.show_excerpt -%}
               <div class="article__content" itemprop="description articleBody">

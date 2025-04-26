@@ -4,6 +4,7 @@ tags: [3D Printed, Tool, DIY]
 layout: article
 show_edit_on_github: false
 license: true
+cover: assets/Desktop-Power-Supply/
 ---
 
 
@@ -69,7 +70,7 @@ Additionally, my original design called for a number of extra features I scrappe
 
 The interface that I settled on was simple: two banana plugs for power and ground, a dial to adjust voltage, a volt/amp meter, and a power switch. In the end, the front panel looked like this:
 
-<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Desktop-Power-Supply/frontpanel.png" alt="Front panel of power supply" width="500" ALIGN="right" HSPACE="20" VSPACE="20"/>
+<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Desktop-Power-Supply/frontpanel.webp" alt="Front panel of power supply" width="500" ALIGN="right" HSPACE="20" VSPACE="20"/>
 
 The front panel doesn't mean anything, however, if it doesn't work with the electronics behind it. So, behind the front panel, I needed to implement the following features:
 1. A space to hold the laptop power supply, ensuring that the AC plug is easily accessible from the back
@@ -78,7 +79,7 @@ The front panel doesn't mean anything, however, if it doesn't work with the elec
 
 ### Actually building it
 
-<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Desktop-Power-Supply/lenovoconnector.png" alt="Two male lenovo DC power connectors" width="300" ALIGN="right" HSPACE="25"/>
+<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Desktop-Power-Supply/lenovoconnector.webp" alt="Two male lenovo DC power connectors" width="300" ALIGN="right" HSPACE="25"/>
 The first step in actually building the power supply was to connect the laptop power supply to the DC-DC buck converter. The laptop power supply did not terminate in a USB-C connector, however; it terminated in Lenovo's proprietary DC connector. 
 
 
@@ -94,7 +95,7 @@ Thankfully, since I salvaged this power supply from an old, broken Lenovo laptop
 
 First, I soldered a wire to the ground output terminal of the DC-DC converter, leading into one terminal of the ON/OFF switch that I selected for this project. It is rated for much more current than this project will ever create, but I selected it mainly for the aesthetics and the intuitive design.
 
-<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Desktop-Power-Supply/powerswitch.png" alt="10A, 250VAC Toggle switch" width="200" ALIGN="right" HSPACE="20"/>
+<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Desktop-Power-Supply/powerswitch.webp" alt="10A, 250VAC Toggle switch" width="200" ALIGN="right" HSPACE="20"/>
 
 Next, I led a wire out of the other terminal of the power switch to one end of the current shunt connector. Then, across the shunt I screwed in a second wire leading to the black banana connector designated for ground. Then, I screwed in a second wire leading out of the first end of the current shunt connected to the COM terminal of the power meter. Third, I screwed in a wire to the second end of the current shunt, leading to the A+ terminal (Current Input) of the power meter. Finally, I soldered two wires to the positive end of the DC-DC converter. One of them led to the red banana connector designated for ground, and the other led to the V+ (Voltage Input) terminal on the power meter.
 
@@ -104,7 +105,7 @@ With the wiring complete, the last thing to do was to mount everything and test 
 
 ## Conclusion
 
-<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Desktop-Power-Supply/render.png" alt="Full CAD model of desktop power supply" width="500" ALIGN="right" HSPACE="20" VSPACE="20"/>
+<img src="https://raw.githubusercontent.com/Ballistyxx/eliferrara/master/assets/Desktop-Power-Supply/render.webp" alt="Full CAD model of desktop power supply" width="500" ALIGN="right" HSPACE="20" VSPACE="20"/>
 
 Since the first time I flipped the switch on my DIY desktop power supply, it has become my single most used DIY project to date. I have used it to inject voltage into various projects, ranging from Arduinos, ESP32s, Raspberry Pis, and even older SBCs, like the UDOO Quad (Look out for a blog post on a project involving this SBC soon!), or even the ancient MIT Handy Board. This was one of my earliest projects as well, and I have learned so much since then.
 
